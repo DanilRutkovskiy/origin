@@ -2,6 +2,7 @@
 
 class Calculator {
 public:
+	Calculator();
 	double add();
 	double multiply();
 	double substract_1_2();
@@ -14,6 +15,10 @@ private:
 	double m_num_1;
 	double m_num_2;
 };
+
+Calculator::Calculator() :m_num_1{ 0 }, m_num_2{ 0 } {
+
+}
 
 double Calculator::add() {
 	return m_num_1 + m_num_2;
