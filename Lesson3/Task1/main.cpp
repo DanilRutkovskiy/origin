@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 class Address
 {
@@ -36,7 +37,10 @@ public:
 	RW();
 	~RW();
 	bool read(const std::string& path);
-	bool write(const std::string& path);
+	bool write(const std::string& path, bool sort = false);
+
+private:
+	void sort();
 
 private:
 	std::vector<Address> m_addrs;
@@ -81,12 +85,15 @@ bool RW::read(const std::string& path) {
 	return true;
 }
 
-bool RW::write(const std::string& path) {
+bool RW::write(const std::string& path, bool sort) {
 	std::ofstream out{ path };
 	if (!out.is_open()) {
 		return false;
 	}
 	else {
+		if (sort)
+			this->sort();
+
 		std::string temp = std::to_string(m_addrs.size()) + '\n';
 		out.write(temp.c_str(), temp.length());
 		for (int i = m_addrs.size() - 1; i >= 0; i--) {
@@ -102,6 +109,13 @@ bool RW::write(const std::string& path) {
 	return true;
 }
 
+void RW::sort()
+{
+	std::sort(m_addrs.begin(), m_addrs.end(), [&](Address& a1, Address& a2)->bool {
+		return a1.get_city() > a2.get_city();
+		});
+}
+
 
 
 int main() {
@@ -111,10 +125,10 @@ int main() {
 	else
 		std::cout << "Read failure" << std::endl;
 
-	if (rw.write("out.txt"))
+	if (rw.write("out.txt", true))
 		std::cout << "Write success";
 	else
 		std::cout << "Write failure" << std::endl;
 
-	return 0;
+  	return 0;
 }
