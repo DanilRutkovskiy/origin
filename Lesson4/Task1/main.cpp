@@ -2,25 +2,28 @@
 
 class Shape {
 public:
-	Shape() : m_edge{0} {};
+	Shape() : m_edge_count{0} {};
 	~Shape() {};
 
 public:
-	int get_edge_count() { return m_edge; };
+	int get_edge_count() { return m_edge_count; };
 
 protected:
-	int m_edge;
+	Shape(int edge) : m_edge_count{ edge } {};
+
+private:
+	int m_edge_count;
 };
 
 class Triangle : public Shape {
 public:
-	Triangle() { m_edge = 3; };
+	Triangle() : Shape{ 3 } {};
 	~Triangle() {};
 };
 
 class Tetragon : public Shape {
 public:
-	Tetragon() { m_edge = 4; };
+	Tetragon() : Shape{4} {};
 	~Tetragon() {};
 };
 
