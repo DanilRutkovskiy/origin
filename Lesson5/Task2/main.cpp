@@ -1,15 +1,5 @@
 #include <iostream>
-class Counter {
-public:
-	Counter() :m_count{ 1 } {};
-	Counter(int count) : m_count{ count } {};
-	Counter& operator++(int) { m_count++; return *this; }
-	Counter& operator--(int) { m_count--; return *this; }
-	int get_count() { return m_count; }
-
-private:
-	int m_count;
-};
+#include "Counter.hpp"
 
 int main() {
 	setlocale(LC_ALL, "Russian");
