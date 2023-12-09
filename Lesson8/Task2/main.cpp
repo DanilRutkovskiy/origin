@@ -72,9 +72,10 @@ public:
 		return *this;
 	}
 
-	const Fraction& operator++(int) {
+	Fraction operator++(int) {
+		Fraction ret{ numerator_ , denominator_ };
 		numerator_ += denominator_;
-		return *this;
+		return ret;
 	}
 
 	const Fraction& operator--() {
@@ -82,9 +83,10 @@ public:
 		return *this;
 	}
 
-	const Fraction& operator--(int) {
+	Fraction operator--(int) {
+		Fraction ret{ numerator_ , denominator_ };
 		numerator_ -= denominator_;
-		return *this;
+		return ret;
 	}
 
 	friend std::ostream& operator<<(std::ostream& left, const Fraction& right);
@@ -115,6 +117,6 @@ int main()
 	std::cout << f1 << " - " << f2 << " = " << (f1 - f2) << std::endl;
 	std::cout << f1 << " * " << f2 << " = " << (f1 * f2) << std::endl;
 	std::cout << f1 << " / " << f2 << " = " << (f1 / f2) << std::endl;
-	std::cout << "++" << ++f1 << " * " << f2 << " = " << (f1 * f2) << std::endl;
+	std::cout << "++" << f1++ << " * " << f2 << " = " << (f1 * f2) << std::endl;
 	return 0;
 }
