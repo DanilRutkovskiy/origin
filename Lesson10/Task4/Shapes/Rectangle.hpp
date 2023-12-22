@@ -1,7 +1,7 @@
 #pragma once
 #include "Tetragon.hpp"
 
-class Rectangle : public Tetragon {
+class SHAPE_API Rectangle : public Tetragon {
 public:
 	Rectangle();
 	Rectangle(double ac, double bd);

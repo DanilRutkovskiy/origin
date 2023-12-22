@@ -1,7 +1,7 @@
 #pragma once
 #include "Tetragon.hpp"
 
-class Parallelogram : public Tetragon {
+class SHAPE_API Parallelogram : public Tetragon {
 public:
 	Parallelogram();
 	Parallelogram(double ac, double bd, double ang_ac, double ang_bd);

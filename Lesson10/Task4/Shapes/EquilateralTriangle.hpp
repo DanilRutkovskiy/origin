@@ -1,7 +1,7 @@
 #pragma once
 #include "Triangle.hpp"
 
-class EquilateralTriangle : public Triangle {
+class SHAPE_API EquilateralTriangle : public Triangle {
 public:
 	EquilateralTriangle();
 	EquilateralTriangle(double side, double angle);
