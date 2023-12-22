@@ -24,7 +24,7 @@ events:
       The output was:
       0
       Версия MSBuild 17.7.2+d6990bcfa для .NET Framework
-      Сборка начата 20.12.2023 16:57:20.
+      Сборка начата 22.12.2023 17:32:29.
       
       Проект "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\3.28.1\\CompilerIdC\\CompilerIdC.vcxproj" в узле 1 (целевые объекты по умолчанию).
       PrepareForBuild:
@@ -52,7 +52,7 @@ events:
           Предупреждений: 0
           Ошибок: 0
       
-      Прошло времени 00:00:00.98
+      Прошло времени 00:00:00.89
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -78,7 +78,7 @@ events:
       The output was:
       0
       Версия MSBuild 17.7.2+d6990bcfa для .NET Framework
-      Сборка начата 20.12.2023 16:57:21.
+      Сборка начата 22.12.2023 17:32:30.
       
       Проект "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" в узле 1 (целевые объекты по умолчанию).
       PrepareForBuild:
@@ -106,7 +106,7 @@ events:
           Предупреждений: 0
           Ошибок: 0
       
-      Прошло времени 00:00:00.79
+      Прошло времени 00:00:00.69
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -125,8 +125,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-s0mfu0"
-      binary: "E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-s0mfu0"
+      source: "E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-8e9hag"
+      binary: "E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-8e9hag"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -135,39 +135,39 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-s0mfu0'
+        Change Dir: 'E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-8e9hag'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d1435.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0e44e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Версия MSBuild 17.7.2+d6990bcfa для .NET Framework
-        Сборка начата 20.12.2023 16:57:22.
+        Сборка начата 22.12.2023 17:32:31.
         
-        Проект "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-s0mfu0\\cmTC_d1435.vcxproj" в узле 1 (целевые объекты по умолчанию).
+        Проект "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8e9hag\\cmTC_0e44e.vcxproj" в узле 1 (целевые объекты по умолчанию).
         PrepareForBuild:
-          Создание каталога "cmTC_d1435.dir\\Debug\\".
-          Создание каталога "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-s0mfu0\\Debug\\".
-          Создание каталога "cmTC_d1435.dir\\Debug\\cmTC_d1435.tlog\\".
+          Создание каталога "cmTC_0e44e.dir\\Debug\\".
+          Создание каталога "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8e9hag\\Debug\\".
+          Создание каталога "cmTC_0e44e.dir\\Debug\\cmTC_0e44e.tlog\\".
         InitializeBuildStatus:
-          Создание "cmTC_d1435.dir\\Debug\\cmTC_d1435.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
-          Обращение к "cmTC_d1435.dir\\Debug\\cmTC_d1435.tlog\\unsuccessfulbuild".
+          Создание "cmTC_0e44e.dir\\Debug\\cmTC_0e44e.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+          Обращение к "cmTC_0e44e.dir\\Debug\\cmTC_0e44e.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d1435.dir\\Debug\\\\" /Fd"cmTC_d1435.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0e44e.dir\\Debug\\\\" /Fd"cmTC_0e44e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
           Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.37.32822 для x64
           CMakeCCompilerABI.c
           (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d1435.dir\\Debug\\\\" /Fd"cmTC_d1435.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0e44e.dir\\Debug\\\\" /Fd"cmTC_0e44e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-s0mfu0\\Debug\\cmTC_d1435.exe" /INCREMENTAL /ILK:"cmTC_d1435.dir\\Debug\\cmTC_d1435.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-s0mfu0/Debug/cmTC_d1435.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-s0mfu0/Debug/cmTC_d1435.lib" /MACHINE:X64  /machine:x64 cmTC_d1435.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_d1435.vcxproj -> E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-s0mfu0\\Debug\\cmTC_d1435.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8e9hag\\Debug\\cmTC_0e44e.exe" /INCREMENTAL /ILK:"cmTC_0e44e.dir\\Debug\\cmTC_0e44e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-8e9hag/Debug/cmTC_0e44e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-8e9hag/Debug/cmTC_0e44e.lib" /MACHINE:X64  /machine:x64 cmTC_0e44e.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_0e44e.vcxproj -> E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8e9hag\\Debug\\cmTC_0e44e.exe
         FinalizeBuildStatus:
-          Файл "cmTC_d1435.dir\\Debug\\cmTC_d1435.tlog\\unsuccessfulbuild" удаляется.
-          Обращение к "cmTC_d1435.dir\\Debug\\cmTC_d1435.tlog\\cmTC_d1435.lastbuildstate".
-        Сборка проекта "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-s0mfu0\\cmTC_d1435.vcxproj" завершена (целевые объекты по умолчанию).
+          Файл "cmTC_0e44e.dir\\Debug\\cmTC_0e44e.tlog\\unsuccessfulbuild" удаляется.
+          Обращение к "cmTC_0e44e.dir\\Debug\\cmTC_0e44e.tlog\\cmTC_0e44e.lastbuildstate".
+        Сборка проекта "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8e9hag\\cmTC_0e44e.vcxproj" завершена (целевые объекты по умолчанию).
         
         Сборка успешно завершена.
             Предупреждений: 0
             Ошибок: 0
         
-        Прошло времени 00:00:00.79
+        Прошло времени 00:00:00.67
         
       exitCode: 0
   -
@@ -179,8 +179,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-b7lgca"
-      binary: "E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-b7lgca"
+      source: "E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-y3p3ab"
+      binary: "E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-y3p3ab"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -189,39 +189,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-b7lgca'
+        Change Dir: 'E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-y3p3ab'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5be4b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_70b0b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Версия MSBuild 17.7.2+d6990bcfa для .NET Framework
-        Сборка начата 20.12.2023 16:57:23.
+        Сборка начата 22.12.2023 17:32:31.
         
-        Проект "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7lgca\\cmTC_5be4b.vcxproj" в узле 1 (целевые объекты по умолчанию).
+        Проект "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y3p3ab\\cmTC_70b0b.vcxproj" в узле 1 (целевые объекты по умолчанию).
         PrepareForBuild:
-          Создание каталога "cmTC_5be4b.dir\\Debug\\".
-          Создание каталога "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7lgca\\Debug\\".
-          Создание каталога "cmTC_5be4b.dir\\Debug\\cmTC_5be4b.tlog\\".
+          Создание каталога "cmTC_70b0b.dir\\Debug\\".
+          Создание каталога "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y3p3ab\\Debug\\".
+          Создание каталога "cmTC_70b0b.dir\\Debug\\cmTC_70b0b.tlog\\".
         InitializeBuildStatus:
-          Создание "cmTC_5be4b.dir\\Debug\\cmTC_5be4b.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
-          Обращение к "cmTC_5be4b.dir\\Debug\\cmTC_5be4b.tlog\\unsuccessfulbuild".
+          Создание "cmTC_70b0b.dir\\Debug\\cmTC_70b0b.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+          Обращение к "cmTC_70b0b.dir\\Debug\\cmTC_70b0b.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5be4b.dir\\Debug\\\\" /Fd"cmTC_5be4b.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_70b0b.dir\\Debug\\\\" /Fd"cmTC_70b0b.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
           Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.37.32822 для x64
           CMakeCXXCompilerABI.cpp
           (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5be4b.dir\\Debug\\\\" /Fd"cmTC_5be4b.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_70b0b.dir\\Debug\\\\" /Fd"cmTC_70b0b.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7lgca\\Debug\\cmTC_5be4b.exe" /INCREMENTAL /ILK:"cmTC_5be4b.dir\\Debug\\cmTC_5be4b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-b7lgca/Debug/cmTC_5be4b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-b7lgca/Debug/cmTC_5be4b.lib" /MACHINE:X64  /machine:x64 cmTC_5be4b.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_5be4b.vcxproj -> E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7lgca\\Debug\\cmTC_5be4b.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y3p3ab\\Debug\\cmTC_70b0b.exe" /INCREMENTAL /ILK:"cmTC_70b0b.dir\\Debug\\cmTC_70b0b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-y3p3ab/Debug/cmTC_70b0b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/Repo/netology/Lesson10/Task3/build/CMakeFiles/CMakeScratch/TryCompile-y3p3ab/Debug/cmTC_70b0b.lib" /MACHINE:X64  /machine:x64 cmTC_70b0b.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_70b0b.vcxproj -> E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y3p3ab\\Debug\\cmTC_70b0b.exe
         FinalizeBuildStatus:
-          Файл "cmTC_5be4b.dir\\Debug\\cmTC_5be4b.tlog\\unsuccessfulbuild" удаляется.
-          Обращение к "cmTC_5be4b.dir\\Debug\\cmTC_5be4b.tlog\\cmTC_5be4b.lastbuildstate".
-        Сборка проекта "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7lgca\\cmTC_5be4b.vcxproj" завершена (целевые объекты по умолчанию).
+          Файл "cmTC_70b0b.dir\\Debug\\cmTC_70b0b.tlog\\unsuccessfulbuild" удаляется.
+          Обращение к "cmTC_70b0b.dir\\Debug\\cmTC_70b0b.tlog\\cmTC_70b0b.lastbuildstate".
+        Сборка проекта "E:\\Repo\\netology\\Lesson10\\Task3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y3p3ab\\cmTC_70b0b.vcxproj" завершена (целевые объекты по умолчанию).
         
         Сборка успешно завершена.
             Предупреждений: 0
             Ошибок: 0
         
-        Прошло времени 00:00:00.78
+        Прошло времени 00:00:00.67
         
       exitCode: 0
 ...

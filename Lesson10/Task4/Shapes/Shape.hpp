@@ -1,8 +1,10 @@
 #pragma once
-#ifdef SHAPE_EXPORT
+#ifdef SHAPE_EXPORTS
 #define SHAPE_API _declspec(dllexport)
+#define EXT
 #else
 #define SHAPE_API _declspec(dllimport)
+#define EXT extern
 #endif
 
 class SHAPE_API Shape {
@@ -11,15 +13,15 @@ public:
 	~Shape() {};
 
 public:
-	int get_edge_count() const { return m_edge_count; };
-	std::string get_name() const { return m_name; };
+	int get_edge_count() const;
+	const char* get_name() const;
 	virtual void print_info() const;
 	virtual bool check_figure() const;
 
 protected:
-	Shape(int edge, std::string name) : m_edge_count{ edge }, m_name{ name } {};
+	Shape(int edge, const char* name) : m_edge_count{ edge }, m_name{ name } {};
 
 private:
 	int m_edge_count;
-	std::string m_name;
+	const char* m_name;
 };

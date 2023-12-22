@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
-
+#ifndef LEAVER_EXPORTS
+#define LEAVER_EXPORTS
+#endif
 #ifdef LEAVER_EXPORTS
 #define LEAVER_API __declspec(dllexport)
 #else
