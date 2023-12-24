@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\TerrestrialTransport">
+      <UniqueIdentifier>{b0ca6869-573e-4b1c-9c46-1d1716982f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\TerrestrialTransport">
+      <UniqueIdentifier>{6c011107-d5c3-4cba-b288-be1fc9e37888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\AirTransport">
+      <UniqueIdentifier>{9578c7c0-4340-4d1c-83a0-6aac3dc98ed3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\AirTransport">
+      <UniqueIdentifier>{84f10ce7-2642-47ab-8cdd-581301675ecf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Race.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MACROS.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Transport.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="AllTerrainBoots.hpp">
+      <Filter>Файлы заголовков\TerrestrialTransport</Filter>
+    </ClInclude>
+    <ClInclude Include="Camel.hpp">
+      <Filter>Файлы заголовков\TerrestrialTransport</Filter>
+    </ClInclude>
+    <ClInclude Include="Centaurus.hpp">
+      <Filter>Файлы заголовков\TerrestrialTransport</Filter>
+    </ClInclude>
+    <ClInclude Include="FastCamel.hpp">
+      <Filter>Файлы заголовков\TerrestrialTransport</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrestrialTransport.hpp">
+      <Filter>Файлы заголовков\TerrestrialTransport</Filter>
+    </ClInclude>
+    <ClInclude Include="AirTransport.hpp">
+      <Filter>Файлы заголовков\AirTransport</Filter>
+    </ClInclude>
+    <ClInclude Include="AirCarpet.hpp">
+      <Filter>Файлы заголовков\AirTransport</Filter>
+    </ClInclude>
+    <ClInclude Include="Eagle.hpp">
+      <Filter>Файлы заголовков\AirTransport</Filter>
+    </ClInclude>
+    <ClInclude Include="Broom.hpp">
+      <Filter>Файлы заголовков\AirTransport</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Race.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Transport.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="AllTerrainBoots.cpp">
+      <Filter>Исходные файлы\TerrestrialTransport</Filter>
+    </ClCompile>
+    <ClCompile Include="Camel.cpp">
+      <Filter>Исходные файлы\TerrestrialTransport</Filter>
+    </ClCompile>
+    <ClCompile Include="Centaurus.cpp">
+      <Filter>Исходные файлы\TerrestrialTransport</Filter>
+    </ClCompile>
+    <ClCompile Include="FastCamel.cpp">
+      <Filter>Исходные файлы\TerrestrialTransport</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrestrialTransport.cpp">
+      <Filter>Исходные файлы\TerrestrialTransport</Filter>
+    </ClCompile>
+    <ClCompile Include="AirTransport.cpp">
+      <Filter>Исходные файлы\AirTransport</Filter>
+    </ClCompile>
+    <ClCompile Include="AirCarpet.cpp">
+      <Filter>Исходные файлы\AirTransport</Filter>
+    </ClCompile>
+    <ClCompile Include="Eagle.cpp">
+      <Filter>Исходные файлы\AirTransport</Filter>
+    </ClCompile>
+    <ClCompile Include="Broom.cpp">
+      <Filter>Исходные файлы\AirTransport</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
