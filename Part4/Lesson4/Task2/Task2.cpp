@@ -60,6 +60,11 @@ int main()
         std::cout << "Thank you, your array: ";
         print_dynamic_array(arr, logical_size, actual_size);
         std::cout << std::endl;
+        std::cout << "Add another element? y/n: ";
+        char ans;
+        std::cin >> ans;
+        if (std::tolower(ans) != 'y')
+            add = false;
     }
     delete[] arr;
     return 0;
