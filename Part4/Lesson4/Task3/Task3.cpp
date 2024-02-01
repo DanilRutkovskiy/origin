@@ -12,20 +12,26 @@ void print_dynamic_array(int* arr, int logical_size, int actual_size) {
 
 }
 
-void append_to_dynamic_array(int*& arr, int& logical_size, int& actual_size, int elem) {
-    if (logical_size == actual_size) {
-        actual_size *= 2;
+bool remove_dynamic_array_head(int*& arr, int& logical_size, int& actual_size) {
+    if (logical_size == 0) {
+        return false;
+    }
+    else if (logical_size <= actual_size / 3) {
+        actual_size /= 3;
         int* temp = new int[actual_size];
-        for (int i = 0; i < logical_size; i++)
-            temp[i] = arr[i];
+        for (int i = 1; i < logical_size; i++)
+            temp[i - 1] = arr[i];
 
-        temp[logical_size++] = elem;
-
+        --logical_size;
         delete[] arr;
         arr = temp;
+        return true;
     }
     else {
-        arr[logical_size++] = elem;
+        for (int i = 1; i < logical_size; i++)
+            arr[i - 1] = arr[i];
+
+        logical_size--;
     }
 }
 
@@ -51,20 +57,20 @@ int main()
 
     print_dynamic_array(arr, logical_size, actual_size);
     std::cout << std::endl;
-    bool add = true;
-    while (add) {
-        std::cout << "Enter new array element: ";
-        int elem;
-        std::cin >> elem;
-        append_to_dynamic_array(arr, logical_size, actual_size, elem);
+    bool del = true;
+    while (true) {
+        std::cout << "Delete element? y/n: ";
+        char ans;
+        std::cin >> ans;
+        if (std::tolower(ans) == 'n') {
+            break;
+        }
+        if (!remove_dynamic_array_head(arr, logical_size, actual_size))
+            std::cout << "Can't remove element!" << std::endl;
+
         std::cout << "Thank you, your array: ";
         print_dynamic_array(arr, logical_size, actual_size);
         std::cout << std::endl;
-        std::cout << "Add another element? y/n: ";
-        char ans;
-        std::cin >> ans;
-        if (std::tolower(ans) != 'y')
-            add = false;s
     }
     delete[] arr;
     return 0;
