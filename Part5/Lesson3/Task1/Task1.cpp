@@ -94,18 +94,31 @@ private:
     unsigned long m_size;
 };
 
-TEST_CASE("List testing", "[Testing list functions]") {
+TEST_CASE("List testing", "[Testing list function Empty()]") {
     List lst;
 
-    CHECK(lst.Empty() == true);
-    CHECK(lst.Size() == 0);
+    REQUIRE(lst.Empty() == true);
     lst.PushBack(1);
     lst.PushBack(2);
     REQUIRE(lst.Empty() == false);
+}
+
+TEST_CASE("List testing", "[Testing list function Size()]") {
+    List lst;
+
+    REQUIRE(lst.Size() == 0);
+    lst.PushBack(1);
+    lst.PushBack(2);
     REQUIRE(lst.Size() == 2);
+}
+
+TEST_CASE("List testing", "[Testing list function Clear()]") {
+    List lst;
+
+    lst.PushBack(1);
+    lst.PushBack(2);
     lst.Clear();
-    CHECK(lst.Empty() == true);
-    CHECK(lst.Size() == 0);
+    REQUIRE(lst.Empty() == true);
 }
 
 int main() {
