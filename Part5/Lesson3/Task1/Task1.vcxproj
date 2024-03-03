@@ -127,11 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="catch_amalgamated.cpp" />
+    <ClCompile Include="..\catch_amalgamated.cpp" />
     <ClCompile Include="Task1.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="catch_amalgamated.hpp" />
+    <ClInclude Include="..\catch_amalgamated.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,12 +18,12 @@
     <ClCompile Include="Task1.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="catch_amalgamated.cpp">
+    <ClCompile Include="..\catch_amalgamated.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="catch_amalgamated.hpp">
+    <ClInclude Include="..\catch_amalgamated.hpp">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
   </ItemGroup>
