@@ -35,8 +35,9 @@ inline MyUniquePtr<T>::~MyUniquePtr()
 template<class T>
 inline T* MyUniquePtr<T>::release()
 {
+	T* ret = m_ptr;
 	m_ptr = nullptr;
-	return m_ptr;
+	return ret;
 }
 
 template<class T>

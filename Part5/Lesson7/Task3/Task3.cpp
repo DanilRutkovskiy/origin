@@ -15,8 +15,8 @@ int main()
     MyUniquePtr<Test> ptr1{ new Test(1) };
     std::cout << "ptr1 m_field =" << (*ptr1).m_field << "\n";
     MyUniquePtr<Test> ptr2{ new Test(2) };
-    std::cout << "ptr2 m_field =" << ptr2->m_field << "\n";
     auto released_ptr = ptr2.release();
+    std::cout << "ptr2 m_field =" << released_ptr->m_field << "\n";
 
     return 0;
 }
