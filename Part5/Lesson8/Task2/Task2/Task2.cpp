@@ -7,7 +7,8 @@ public:
     BigNumber(BigNumber&& num) noexcept;
 
 public:
-    BigNumber operator=(BigNumber&& num) noexcept;
+    void operator=(BigNumber&& num) noexcept;
+    void operator=(const BigNumber& num);
     BigNumber operator+(const BigNumber& num);
     friend BigNumber operator*(int n1, const BigNumber& num);
 
@@ -58,9 +59,14 @@ BigNumber::BigNumber(BigNumber&& num) noexcept
     this->m_data = std::move(num.m_data);
 }
 
-BigNumber BigNumber::operator=(BigNumber&& num) noexcept
+void BigNumber::operator=(BigNumber&& num) noexcept
 {
-    return std::move(num);
+    this->m_data = std::move(num.m_data);
+}
+
+void BigNumber::operator=(const BigNumber& num)
+{
+    this->m_data = num.m_data;
 }
 
 BigNumber BigNumber::operator+(const BigNumber& num)
