@@ -13,6 +13,9 @@ int main()
 	catch(std::exception ex){
 		std::cout << ex.what();
 	}
+	catch (...) {
+		std::cout << "Unknown error";
+	}
 	
  	return 0;
 }

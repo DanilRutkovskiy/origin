@@ -3,7 +3,7 @@
 #include <exception>
 #include "IniParser.hpp"
 
-IniParser::IniParser(std::string path) : m_path{ path }
+IniParser::IniParser(std::string&& path) : m_path{ path }
 {	
 	read_file(path);
 }

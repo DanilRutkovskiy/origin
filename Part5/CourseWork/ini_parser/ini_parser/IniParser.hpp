@@ -8,7 +8,8 @@ class Section;
 
 class IniParser {
 public:
-	IniParser(std::string path);
+	IniParser() = delete;
+	IniParser(std::string&& path);
 
 public:
 	template<typename T>
