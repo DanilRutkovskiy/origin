@@ -1,0 +1,24 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "D:/Repo/origin/Part6 - SQL/Lesson5/out/build/x64-Debug",
+	"dir-cur-src" : "D:/Repo/origin/Part6 - SQL/Lesson5",
+	"dir-top-bld" : "D:/Repo/origin/Part6 - SQL/Lesson5/out/build/x64-Debug",
+	"dir-top-src" : "D:/Repo/origin/Part6 - SQL/Lesson5",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		".",
+		"D:\\Repo\\origin\\Part6 - SQL\\Lesson5\\ClientManager",
+		"ClientManager\\libpqxx_build\\include",
+		"D:\\cpp_libs\\libpqxx_7.9.0\\include"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "D:/Repo/origin/Part6 - SQL/Lesson5/out/build/x64-Debug/CMakeFiles/Task1.dir"
+}

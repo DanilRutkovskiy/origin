@@ -1,0 +1,189 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "ClientManager",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-ClientManager-Debug-8953493d558ca82582b7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ClientManager",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "ClientManager/libpqxx_build",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-ClientManager.libpqxx_build-Debug-ac7d88101ade772e9f84.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "D:/cpp_libs/libpqxx_7.9.0"
+				},
+				{
+					"build" : "ClientManager/libpqxx_build/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-ClientManager.libpqxx_build.src-Debug-3bc3ef8c975a1325439d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "D:/cpp_libs/libpqxx_7.9.0/src",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "ClientManager/libpqxx_build/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-ClientManager.libpqxx_build.include-Debug-d92d35ed110f28739390.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "D:/cpp_libs/libpqxx_7.9.0/include"
+				},
+				{
+					"build" : "ClientManager/libpqxx_build/test",
+					"jsonFile" : "directory-ClientManager.libpqxx_build.test-Debug-0001010b58c8ca0e1d92.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "D:/cpp_libs/libpqxx_7.9.0/test",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "Task1",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					],
+					"name" : "libpqxx",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "ClientManagerLib::@14694b50e35c5a18e186",
+					"jsonFile" : "target-ClientManagerLib-Debug-64573d777d41c2be5033.json",
+					"name" : "ClientManagerLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Task1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task1-Debug-606bc798c1ef1cb0a6c6.json",
+					"name" : "Task1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "pqxx::@21a4ed5600c4eadf64a4",
+					"jsonFile" : "target-pqxx-Debug-f1c03896d939512978a8.json",
+					"name" : "pqxx",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "runner::@ac1b90f7020b83517e05",
+					"jsonFile" : "target-runner-Debug-43f2a7fdae3192855a92.json",
+					"name" : "runner",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Repo/origin/Part6 - SQL/Lesson5/out/build/x64-Debug",
+		"source" : "D:/Repo/origin/Part6 - SQL/Lesson5"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

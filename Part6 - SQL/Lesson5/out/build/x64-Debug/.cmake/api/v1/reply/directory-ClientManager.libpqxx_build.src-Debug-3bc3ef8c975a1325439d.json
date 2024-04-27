@@ -1,0 +1,68 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"library_target_setup"
+		],
+		"files" : 
+		[
+			"D:/cpp_libs/libpqxx_7.9.0/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 81,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 33,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 90,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"ClientManager/libpqxx_build/src/pqxx.lib"
+			],
+			"targetId" : "pqxx::@21a4ed5600c4eadf64a4",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"out/build/x64-Debug/ClientManager/libpqxx_build/libpqxx.pc"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "ClientManager/libpqxx_build/src",
+		"source" : "D:/cpp_libs/libpqxx_7.9.0/src"
+	}
+}

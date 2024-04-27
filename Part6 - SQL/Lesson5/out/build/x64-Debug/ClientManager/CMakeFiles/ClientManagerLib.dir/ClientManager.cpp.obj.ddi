@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "ClientManager\\CMakeFiles\\ClientManagerLib.dir\\ClientManager.cpp.obj",
+            "outputs": [
+                "D:\\Repo\\origin\\Part6 - SQL\\Lesson5\\out\\build\\x64-Debug\\vc140.pdb",
+                "ClientManager\\CMakeFiles\\ClientManagerLib.dir\\ClientManager.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

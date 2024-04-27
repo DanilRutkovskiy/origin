@@ -1,162 +1,158 @@
 #include <iostream>
-#include <pqxx/pqxx>
 
 #include <Windows.h>
+#include <conio.h>
 
-int get_client_id(pqxx::work& tr, const std::string& name, const std::string& surname) {
-	auto c_res = tr.query<int>("SELECT id FROM public.client c WHERE c.name = '"
-		+ tr.esc(name) + "' AND c.surname = '" + tr.esc(surname) + "'");
+#include "ClientManager.hpp"
 
-	if (c_res.begin() == c_res.end()) {
-		std::string out = "Client: " + name + " " + surname + " doesn't registered!";
-		std::exception ex{ out.c_str() };
-		throw ex;
-	}
+void onAddPhoneNumberAct(ClientManager& cl, int clientId) {
+	std::string number_str;
+	std::cout << "Input number: ";
+	std::cin >> number_str;
 
-	auto get_id = [&](const auto& r)->int {
-		std::tuple<int> t = *(r.begin());
-
-		return std::get<0>(t);
-		};
-
-	return get_id(c_res);
+	cl.addPhoneNumber(clientId, number_str);
 }
 
-int get_client_id_by_email(pqxx::work& tr, const std::string& email) {
-	auto c_res = tr.query<int>("SELECT id FROM public.client c WHERE c.email = '"
-		+ tr.esc(email) + "'");
+void onUpdateClientAct(ClientManager& cl, int clientId) {
+	std::string name, surname, email;
 
-	if (c_res.begin() == c_res.end()) {
-		return -1;
-	}
+	std::cout << "Enter client's name: ";
+	std::cin >> name;
 
-	auto get_id = [&](const auto& r)->int {
-		std::tuple<int> t = *(r.begin());
+	std::cout << "Enter client's surname: ";
+	std::cin >> surname;
 
-		return std::get<0>(t);
-		};
+	std::cout << "Enter client's enail: ";
+	std::cin >> email;
 
-	return get_id(c_res);
+	cl.updateClient(clientId, name, surname, email);
 }
 
-int get_client_id(pqxx::work& tr, const std::string& number) {
-	auto c_res = tr.query<int>("SELECT client_id FROM public.phonenumber pn WHERE pn.number = '"
-		+ tr.esc(number));
+void onDeletePhoneNumberAct(ClientManager& cl, int clientId) {
+	auto numbers = cl.getPhoneNumbers(clientId);
 
-	if (c_res.begin() == c_res.end()) {
-		std::string out = "Number: " + number + " doesn't registered!";
-		std::exception ex{ out.c_str() };
-		throw ex;
+	std::cout << "Client's numbers: \n";
+	int counter = 0;
+	for (const auto& number : numbers) {
+		counter++;
+		std::cout << std::to_string(counter) << ". " << std::get<1>(number) << "\n";
 	}
 
-	auto get_id = [&](const auto& r)->int {
-		std::tuple<int> t = *(r.begin());
+	std::cout << "Choose number to delete: ";
+	int num;
+	std::cin >> num;
 
-		return std::get<0>(t);
-		};
-
-	return get_id(c_res);
+	cl.deletePhoneNumber(clientId, std::get<1>(numbers[num - 1]));
 }
 
-void delete_phone(pqxx::connection& conn, const std::string& name, const std::string& surname, const std::string& phone_to_delete = "") {
-	pqxx::work tr(conn);
+void onChosenClientAct(ClientManager& cl, int clientId) {
+	std::cout << "Choose action: \n 1.Add phone number \n 2.Update client \n 3.Delete phone number \n"
+		<< "4.Delete client \n 0.Back \n";
 
-	int c_id = get_client_id(tr, name, surname);
+	int action;
+	std::cin >> action;
 
-	if (phone_to_delete != "") {
-		auto pn_res = tr.query<int>("SELECT id FROM public.phonenumber pn WHERE pn.number = '" + tr.esc(phone_to_delete) + "'");
-		if (pn_res.begin() == pn_res.end()) {
-			std::string out = "Number: " + phone_to_delete + " doesn't registered!";
-			std::exception ex{ out.c_str() };
-			throw ex;
+	switch (action) {
+	case 1:
+	{
+		onAddPhoneNumberAct(cl, clientId);
+		break;
+	}
+	case 2:
+	{
+		onUpdateClientAct(cl, clientId);
+		break;
+	}
+	case 3:
+	{
+		onDeletePhoneNumberAct(cl, clientId);
+		break;
+	}
+	case 4:
+	{
+		cl.removeClient(clientId);
+		break;
+	}
+	case 0:
+	{
+		break;
+	}
+	}
+}
+
+void showClients(ClientManager& cl, std::vector<std::tuple<int, std::string, std::string, std::string>> clients) {
+	int counter = 0;
+	for (const auto& client : clients) {
+		++counter;
+		std::cout << std::to_string(counter) << ". " << std::get<1>(client) << " " <<
+			std::get<2>(client) << ", " << std::get<3>(client) << "\n";
+
+		auto numbers = cl.getPhoneNumbers(std::get<0>(client));
+		std::cout << "\tClient's phone numbers: \n";
+		int counter = 0;
+		for (auto number : numbers) {
+			counter++;
+			std::cout << "\t" << std::to_string(counter) << ". " << std::get<1>(number) << "\n";
 		}
-
-		int pn_id = std::get<0>((*pn_res.begin()));
-
-		tr.exec("DELETE FROM public.phonenumber WHERE id = " + std::to_string(pn_id));
 	}
-	else {
-		tr.exec("DELETE FROM public.phonenumber WHERE client_id = " + std::to_string(c_id));
-	}
-
-	tr.commit();
 }
 
-void delete_client(pqxx::connection& conn, const std::string& name, const std::string& surname) {
-	delete_phone(conn, name, surname);
+void onShowClientsAct(ClientManager& cl) {
+	auto clients = cl.getAllClients();
+	std::cout << "Currently registered clients: \n";
 
-	pqxx::work tr(conn);
-
-	tr.exec("DELETE FROM public.client WHERE name = '" + tr.esc(name) + "' AND surname = '" + tr.esc(surname) + "'");
-
-	tr.commit();
-}
-
-void change_email(pqxx::connection& conn, const std::string& name, const std::string& surname, const std::string& email) {
-	pqxx::work tr(conn);
-
-	int c_id = get_client_id(tr, name, surname);
-	int c_id_by_email = get_client_id_by_email(tr, email);
-	if (c_id_by_email >= 0 && c_id != c_id_by_email) {
-		std::string out = "Email: " + email + "already registered for other client!";
-		std::exception ex{ out.c_str() };
-		throw ex;
+	if (clients.size() == 0) {
+		std::cout << "No registered clients. Press any key to continue...\n\n";
+		_getch();
+		return;
 	}
 
-	tr.exec("UPDATE public.client SET email = '" + tr.esc(email) +
-		"' WHERE id = " + std::to_string(c_id));
+	showClients(cl, clients);
 
-	tr.commit();
+	std::cout << "Choose Client: ";
+	int clientNum = -1;
+	std::cin >> clientNum;
+
+	auto it = clients.begin();
+	std::advance(it, clientNum - 1);
+	int clientId = std::get<0>(*it);
+
+	onChosenClientAct(cl, clientId);
 }
 
-void add_number(pqxx::connection& conn, const std::string& number, const std::string& name, const std::string& surname) {
-	pqxx::work tr(conn);
+void onAddClientAct(ClientManager& cl) {
+	std::string name, surname, email;
 
-	int c_id = get_client_id(tr, name, surname);
+	std::cout << "Enter client's name: ";
+	std::cin >> name;
 
-	auto ress = tr.query<int>("SELECT id FROM public.phonenumber pn WHERE pn.number = '" + tr.esc(number) + "'");
-	if (ress.begin() != ress.end()) {
-		std::string out = "Number: " + number + " already registered";
-		std::exception ex{out.c_str()};
-		throw ex;
-	}
-		
-	tr.exec("INSERT INTO public.phonenumber(client_id, number)"
-		"VALUES(" + std::to_string(c_id) + ", '" + tr.esc(number) + "')");
+	std::cout << "Enter client's surname: ";
+	std::cin >> surname;
 
-	tr.commit();
+	std::cout << "Enter client's enail: ";
+	std::cin >> email;
+
+	cl.addClient(name, surname, email);
 }
 
-void add_client(pqxx::connection& conn, const std::string& name, const std::string& surname, const std::string& email = "") {
-	pqxx::work tr(conn);
+void onFindClientAct(ClientManager& cl) {
+	std::cout << "Enter value to search for: ";
+	std::string searchVal;
+	std::cin >> searchVal;
 
-	auto res = tr.query<int>("SELECT id FROM public.client c WHERE c.name = '" + tr.esc(name) + "'AND c.surname = '" + tr.esc(surname) + "'");
+	auto clients = cl.findClients(searchVal);
 
-	if (res.begin() != res.end()) {
-		std::exception ex{ "Client already registered!" };
-		throw ex;
-	}
-		
+	showClients(cl, clients);
 
-	tr.exec("INSERT INTO public.Client(name, surname, email) "
-		"VALUES('" + tr.esc(name) + "', '" + tr.esc(surname) + "', '" + tr.esc(email) + "')");
+	std::cout << "Choose Client: ";
+	int clientNum = -1;
+	std::cin >> clientNum;
 
-	tr.commit();
-}
+	auto it = clients.begin();
+	std::advance(it, clientNum - 1);
+	int clientId = std::get<0>(*it);
 
-void create_database_structure(pqxx::connection& conn) {
-	pqxx::work tr(conn);
-
-	tr.exec("create table if not exists public.Client(id serial primary key, "
-		"name varchar(60) not null, "
-		"surname varchar(60) not null, "
-		"email text)");
-
-	tr.exec("create table if not exists public.PhoneNumber(id serial primary key, "
-		"client_id integer references public.Client(id), "
-		"number text not null)");
-
-	tr.commit();
+	onChosenClientAct(cl, clientId);
 }
 
 int main() {
@@ -165,27 +161,51 @@ int main() {
 	setvbuf(stdout, nullptr, _IOFBF, 1000);
 
 	try {
-		pqxx::connection conn{ "host = 127.0.0.1 "
-							  "port=5432 "
-							  "dbname=clients "
-							  "user=postgres "
-							  "password=secret" };
+		ClientManager cl;
+		cl.initDbStrucuture();
+		bool exec = true;
+		while (exec)
+		{
+			std::cout << "Client database. \n Actions: \n";
+			std::cout << "1 - Show clients \n 2 - Add client \n "
+				"3 - Find client \n 0 - Exit \n Choose action: ";
 
-		create_database_structure(conn);
+			int act;
+			std::cin >> act;
 
-		add_client(conn, "Danil", "Lizov");
+			system("CLS");
 
-		add_number(conn, "89088822908", "Danil", "Lizov");
+			switch (act) {
+			case 0:
+			{
+				exec = false;
+				break;
+			}
+			case 1:
+			{
+				onShowClientsAct(cl);
 
-		change_email(conn, "Danil", "Lizov", "ggg@gmail.com");
-
-		delete_phone(conn, "Danil", "Lizov", "89088822908");
-
-		delete_client(conn, "Danil", "Lizov");
+				break;
+			}
+			case 2:
+			{
+				onAddClientAct(cl);
+				break;
+			}
+			case 3:
+			{
+				onFindClientAct(cl);
+				break;
+			}
+			default:
+				std::cout << "Wrong command!\n";
+				break;
+			}	
+		}
 	}
-	catch (std::exception& ex) {
-		std::cout << ex.what() << std::endl;
+	catch (std::exception ex) {
+		std::cout << ex.what();
 	}
-	
+
 	return 0;
 }
