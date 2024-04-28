@@ -1,3 +1,0 @@
-D:/Repo/origin/Part6 - SQL/Lesson5/out/build/x64-Debug/libpqxx_build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_0f1df.dir
-D:/Repo/origin/Part6 - SQL/Lesson5/out/build/x64-Debug/libpqxx_build/CMakeFiles/CMakeTmp/CMakeFiles/edit_cache.dir
-D:/Repo/origin/Part6 - SQL/Lesson5/out/build/x64-Debug/libpqxx_build/CMakeFiles/CMakeTmp/CMakeFiles/rebuild_cache.dir
