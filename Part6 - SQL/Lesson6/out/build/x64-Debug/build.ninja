@@ -51,6 +51,7 @@ build cmake_object_order_depends_target_Task1: phony || CMakeFiles\Task1.dir
 
 build CMakeFiles\Task1.dir\main.cpp.obj: CXX_COMPILER__Task1_unscanned_Debug D$:\Repo\origin\Part6$ -$ SQL\Lesson6\main.cpp || cmake_object_order_depends_target_Task1
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -Zi
+  INCLUDES = -I"D:\Repo\origin\Part6 - SQL\Lesson6\external\wt\include"
   OBJECT_DIR = CMakeFiles\Task1.dir
   OBJECT_FILE_DIR = CMakeFiles\Task1.dir
   TARGET_COMPILE_PDB = CMakeFiles\Task1.dir\
@@ -68,6 +69,7 @@ build Task1.exe: CXX_EXECUTABLE_LINKER__Task1_Debug CMakeFiles\Task1.dir\main.cp
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_PATH = -LIBPATH:\external\wt\lib
   OBJECT_DIR = CMakeFiles\Task1.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
