@@ -1,0 +1,2 @@
+cmake_minimum_required(VERSION 3.20)
+add_library(SqlQueryBuilder sql_query_builder.hpp sql_query_builder.cpp)
