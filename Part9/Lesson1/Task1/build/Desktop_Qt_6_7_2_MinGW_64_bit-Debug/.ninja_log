@@ -1,0 +1,8 @@
+# ninja log v6
+1	60	7429124908357163	Task1_autogen/timestamp	afaf98071b2fa273
+1	60	7429124908357163	Task1_autogen/mocs_compilation.cpp	afaf98071b2fa273
+1	60	7429124908357163	D:/repo/origin/Part9/Lesson1/Task1/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/Task1_autogen/timestamp	afaf98071b2fa273
+1	60	7429124908357163	D:/repo/origin/Part9/Lesson1/Task1/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/Task1_autogen/mocs_compilation.cpp	afaf98071b2fa273
+61	84	7429124908511082	CMakeFiles/Task1.dir/Task1_autogen/mocs_compilation.cpp.obj	de580b52b02d6513
+61	879	7429124908511082	CMakeFiles/Task1.dir/main.cpp.obj	b65f68089a19e739
+880	929	7429124916695037	Task1.exe	357df31e79770aaa
